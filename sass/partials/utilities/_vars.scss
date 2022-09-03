@@ -1,0 +1,33 @@
+$color-de-fondo: linear-gradient(180deg, rgba(9,8,8,1) 
+25%, rgba(33,31,32,1) 75%);
+$color-principaluno: #f4a9a9;
+$color-principaldos: #ffffff;
+$color-principaltres: #141212;
+$color-principalcuatro: #262424;
+$color-principalcinco: #000;
+$color-principalseis: #ee7c7c;
+
+$fuente-monstserrat: 'Montserrat', sans-serif;
+$fuente-estonia: 'Estonia', cursive;
+$fuente-bebas: 'Bebas Neue', cursive;
+$fuente-lato: 'Lato', sans-serif;
+
+@mixin texto-color-alineacion {
+    color: $color-principaldos;
+    text-align: center;
+}
+
+@mixin sombreado-de-caja {
+    box-shadow:  10px 10px 7px $color-principaltres,
+               -10px -10px 7px $color-principalcuatro;
+}
+
+$recuadro: (
+    altoDeImagen:300px,
+    anchoDeImagen: 300px, 
+);
+
+$bordes: (
+    borde: 8px $color-principaluno solid,
+    curvaDelBorde: 5%,
+);

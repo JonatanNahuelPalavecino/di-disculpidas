@@ -1,0 +1,200 @@
+@import "../utilities/vars";
+@import "../responsive/media-queries";
+
+%alineacionprincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-areas:
+        "contenido1 contenido2"
+        "contenido3 contenido4"
+        "contenido5 contenido5";
+  grid-template-columns: 47% 47%;
+  justify-content: center;
+  gap: 1rem;
+  @include hasta1115px {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5rem;
+    align-items: center;
+  }
+  @include hasta768px {
+    margin: 0px 2rem;
+  }
+
+  &__articuloUno {
+    grid-area: contenido1;   
+    @extend %alineacionprincipal;
+    margin-top: 4rem;
+    @include hasta650px {
+      margin-top: 2rem;
+    }
+  }
+  
+  &__titulo {
+    font-family: $fuente-bebas;
+    font-size: 3rem;
+    @include texto-color-alineacion;
+    line-height: 3rem;
+    @include hasta768px {
+      font-size: 2.8rem;
+    }
+    @include hasta650px {
+      line-height: 2.5rem;
+    }
+    @include hasta550px {
+      font-size: 2.2rem;
+    }
+    @include hasta425px {
+      font-size: 2rem;
+    }
+  }
+    
+  &__descripcion {
+    font-family: $fuente-monstserrat;
+    font-size: 1.3rem;
+    @include texto-color-alineacion;
+    line-height: 2rem;
+    @include hasta650px {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+    @include hasta550px {
+      font-size: 1rem;
+    }
+
+    &--mt {
+      @include hasta1115px {
+        margin-top: 2rem;
+      }
+      @include hasta650px {
+        margin-top: 1rem;
+      }
+    }
+  }
+  
+  &__slider {
+    grid-area: contenido2;
+    overflow: hidden;
+    margin-top: 4rem;
+    border: map-get($bordes, borde);
+    border-radius: map-get($bordes , curvaDelBorde);
+    @include sombreado-de-caja;
+    @include hasta1115px {
+      width: 700px;
+      height: 470px;
+    }
+    @include hasta768px {
+      width: 600px;
+      height: 450px;
+    }
+    @include hasta650px {
+      width: 525px;
+      height: 395px;
+      margin-top: 2rem;
+    }
+    @include hasta550px {
+      width: 400px;
+      height: 300px;
+    }
+    @include hasta425px {
+      width: 360px;
+      height: 270px;
+    }
+    @include hasta380px {
+      width: 310px;
+      height: 235px;
+    }
+  }
+    
+  &__articuloDos {
+    grid-area: contenido4;   
+    @extend %alineacionprincipal;
+    margin-top: 4rem;
+    @include hasta650px {
+      margin-top: 2rem;
+    }
+  }
+    
+  &__multimedia {
+    grid-area: contenido3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    border: map-get($bordes, borde);
+    border-radius: map-get($bordes , curvaDelBorde);
+    @include sombreado-de-caja;
+    width: 100%;
+    height: 470px;
+    @include hasta1115px {
+      width: 700px;
+    }
+    @include hasta768px {
+      width: 600px;
+      height: 450px;
+    }
+    @include hasta650px {
+      width: 525px;
+      height: 395px;
+      margin-top: 2rem;
+    }
+    @include hasta550px {
+      width: 400px;
+      height: 300px;
+    }
+    @include hasta425px {
+      width: 360px;
+      height: 270px;
+    }
+    @include hasta380px {
+      width: 310px;
+      height: 235px;
+    }
+  }
+
+  &__video {
+    width: 101%;
+  }
+    
+  &__tituloMap {
+    grid-area: contenido5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    @include hasta650px {
+      margin-top: 2rem;
+    }
+  }
+    
+  &__transporte {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    @include hasta768px {
+      flex-direction: column;
+    }      
+  }
+    
+  &__tituloChico {
+    font-family: $fuente-bebas;
+    font-size: 1.8rem;
+    color: #ffffff;
+    line-height: 3rem;
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+    @include hasta768px {
+      font-size: 1.6rem;
+    }
+  }
+    
+  &__map {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../utilities/vars";
+
+.separador {
+  height: 8px !important;
+  opacity: 1;
+}
+
+.color-change-3x {
+	-webkit-animation: color-change-3x 4s ease-in-out infinite alternate;
+	        animation: color-change-3x 4s ease-in-out infinite alternate;
+}
+
+@keyframes color-change-3x {
+  0% {background: $color-principaldos;}
+  50% {background: $color-principaluno;}
+  100% {background: #ee7c7c;}
+}
+
+@keyframes color-change-3x {
+  0% {background: $color-principaldos;}
+  50% {background: $color-principaluno;}
+  100% {background: #ee7c7c;}
+}

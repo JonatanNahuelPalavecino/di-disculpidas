@@ -1,0 +1,83 @@
+@import "../responsive/media-queries";
+@import "../utilities/vars";
+
+.nosotras__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    @include hasta650px {
+      margin-top: 2rem;
+    }
+
+    &Local {
+      display: grid;
+      grid-template-areas: "foto1 foto2"
+                        "descripcion1 foto2";
+      grid-template-rows: 1fr 42%;
+      grid-template-columns: 47% 21%;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 4rem;
+      @include hasta1115px {
+        grid-template-rows: 43% 40%;
+        grid-template-columns: 50% 25%;
+      }
+      @include hasta768px {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+      }
+      @include hasta650px {
+        margin-bottom: 2rem;
+      }
+    }
+    
+    &ImgAncha {
+      grid-area: foto1;
+      overflow: hidden;
+      border: map-get($bordes, borde);
+      border-radius: map-get($bordes, curvaDelBorde)-4%;
+      @include sombreado-de-caja;
+      object-fit: cover;
+      @include hasta768px {
+          width: 550px;
+      }
+      @include hasta650px {
+        width: 400px;
+      }
+      @include hasta425px {
+        width: 300px;
+      }
+    }
+    
+    &ImgLarga {
+      grid-area: foto2;
+      overflow: hidden;
+      border: map-get($bordes, borde);
+      border-radius: map-get($bordes, curvaDelBorde)-4%;
+      @include sombreado-de-caja;
+      object-fit: cover;
+      @include hasta768px {
+        width: 250px;
+    }
+    }
+    
+    &Descripcion {
+      grid-area: descripcion1;
+    }
+  }
+  
+  .contenedor__descripcion--corto {
+    width: 500px;
+    margin-top: 2rem;
+    @include hasta650px {
+        width: 400px;
+    }
+    @include hasta425px {
+        width: 300px;
+    }
+  }
+  

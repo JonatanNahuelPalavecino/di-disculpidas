@@ -1,0 +1,72 @@
+@import "../utilities/vars";
+@import "../responsive/media-queries";
+
+.proximamente {
+  margin: 4rem 0px 4rem;
+  @include hasta650px {
+    margin: 2rem 0px 2rem;
+  }
+
+  &__contenedorUno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  &__descripcion {
+    margin-top: 2rem;
+    width: 500px;
+    @include hasta650px {
+      width: 350px;
+    }
+    @include hasta650px {
+      width: 300px;
+    }
+  }
+  
+  &__contenedorDos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4rem 2rem;
+    @include hasta1300px {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    @include hasta1300px {
+      margin: 2rem 1rem;
+    }
+  }
+  
+  &__contenedorImg {
+    border: map-get($bordes, borde);
+    border-radius: map-get($bordes, curvaDelBorde);
+    @include sombreado-de-caja;
+    object-fit: cover;
+    width: map-get($recuadro, anchoDeImagen);
+    height: map-get($recuadro, altoDeImagen);
+    @include hasta1300px {
+      width: map-get($recuadro, anchoDeImagen)+200px;
+      height: map-get($recuadro, altoDeImagen)+200px;
+      margin-bottom: 3rem;
+    }
+    @include hasta1115px {
+      width: map-get($recuadro, anchoDeImagen)+300px;
+      height: map-get($recuadro, altoDeImagen)+150px;
+    }
+    @include hasta768px {
+      width: map-get($recuadro, anchoDeImagen)+100px;
+      height: map-get($recuadro, altoDeImagen);
+    }
+    @include hasta650px {
+      margin-bottom: 1.5rem;
+    }
+    @include hasta425px {
+      width: map-get($recuadro, anchoDeImagen);
+      height: map-get($recuadro, altoDeImagen);
+    }
+  }
+}
+

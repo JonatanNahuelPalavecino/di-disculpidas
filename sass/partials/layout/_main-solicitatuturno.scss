@@ -1,0 +1,200 @@
+@import "../utilities/vars";
+@import "../responsive/media-queries";
+
+%alineacionstt {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+}
+
+.form {
+    @extend %alineacionstt;
+    margin: 4rem 0px 4rem;
+
+    &__contenedor {
+      width: 840px;
+      text-align: center;
+      @include hasta1115px {
+        width: 700px;
+      }
+      @include hasta768px {
+        width: 550px;
+      }
+      @include hasta650px {
+        width: 425px;
+      }
+      @include hasta425px {
+        width: 280px;
+      }
+
+      &Recuadro {
+        @extend %alineacionstt;
+        border: map-get($bordes, borde);
+        border-radius: map-get($bordes, curvaDelBorde)-4%;
+        @include sombreado-de-caja;
+        margin-top: 4rem;
+      }
+      
+      &Titulo {
+        font-family: $fuente-lato;
+        font-size: 1.8rem;
+        color: $color-principaluno;
+        padding: 30px 0px;
+        @include hasta1115px {
+          font-size: 1.6rem;
+        }
+        @include hasta768px {
+          font-size: 1.4rem;
+        }
+        @include hasta425px {
+          font-size: 1.2rem;
+        }
+      }
+      
+      &Comp:focus {
+        border-color: $color-principaldos;
+        box-shadow: 0 0 0 0.25rem $color-principaluno;
+      }
+      
+      &Opcion {
+        display: flex;
+        font-family: $fuente-lato;
+        font-size: 1.3rem;
+        color: $color-principaldos;
+        padding-left: 0;
+        @include hasta1115px {
+          font-size: 1.1rem;
+        }
+        @include hasta768px {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        @include hasta650px {
+          flex-direction: column;
+        }
+      }
+
+      &Dato {
+        @include hasta768px {
+          margin-bottom: 10px;
+        }
+      }
+      
+      &Radio {
+        border-radius: 25% !important;
+        margin-left: 1.5em !important;
+        margin-right: 10px;
+
+        &--ml {
+          @include hasta768px{
+            margin-left: 0 !important; 
+          }
+          @include hasta650px{
+            margin-left: 1.5em !important; 
+          }
+        }
+
+        &:checked {
+          background-color: $color-principalseis;
+          border-color: $color-principaluno;
+        }
+        
+        &:focus {
+          border-color: $color-principaluno;
+          box-shadow: none;
+        }
+      }
+
+      &Sel {
+
+        &:focus {
+          border-color: $color-principaldos;
+          box-shadow: 0 0 0 0.25rem $color-principaluno;
+        }
+
+        @include hasta650px {
+          display: initial;
+          width: 85%;
+        }
+      }
+    }
+    
+    &__textarea {
+      width: 35rem;
+      height: 15rem;
+      @include hasta1115px {
+        width: 30rem;
+        height: 12rem;
+      }
+      @include hasta768px {
+        width: 25rem;
+        height: 10rem;
+      }
+      @include hasta650px {
+        width: 18rem;
+        height: 8rem;
+      }
+      @include hasta425px {
+        width: 15rem;
+        height: 6rem;
+      }
+    }
+    
+    &__contenedorbtn {
+      margin: 30px 0px;
+      @include hasta768px {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+   
+  .btn {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: $color-principalcinco;
+    background-color: $color-principaldos;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0px 1rem;
+    @include hasta1115px {
+      font-size: 10px;
+    }
+    @include hasta768px {
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      background-color: $color-principaluno;
+      box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+      color: $color-principaldos;
+      transform: translateY(-7px);
+    }
+     
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem #f4a9a9;
+    }
+  }
+
+.mensaje {
+  color: white;
+    position: absolute;
+    top: 350px;
+    right: 450px;
+    border: 4px solid limegreen;
+    background-color: green;
+    border-radius: 10px;
+}
+   

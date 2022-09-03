@@ -1,0 +1,16 @@
+@import "./partials/utilities/vars";
+@import "./partials/base/reset";
+@import "./partials/base/theme";
+
+@import "./partials/layout/header-general";
+@import "./partials/componentes/separador";
+@import "./partials/layout/main-principal";
+@import "./partials/layout/footer-general";
+
+@import "./partials/layout/main-nosotras";
+@import "./partials/layout/main-solicitatuturno";
+@import "./partials/layout/main-galeriadefotos";
+@import "../sass/partials/layout/main-listadeprecios";
+@import "../sass/partials/layout/main-proximamente";
+
+@import "./partials/responsive/media-queries";

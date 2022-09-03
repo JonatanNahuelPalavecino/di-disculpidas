@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Estonia&family=Lato:ital,wght@1,300&family=Montserrat:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <title>Solicita tu Turno - DI-DI Sculpidas</title>
+    <meta name="description" content="Sitio Web de DI-DI Sculpidas. Donde podras tener tus uñas como siempre lo imaginaste! Entrá para ver nuestros trabajos, solicitar un turno, ver los precios, etc. No dejes pasar tu oportunidad!">
+    <meta name="keywords" content="uñas, esculpidas, capping, esmalte, francesitas">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../sass/main.css">
+    <script defer src="../js/archivo.js"></script>
+</head>
+<body>
+
+<!--Comienzo de Encabezado + botones navegables de la Web-->
+
+    <div id="body" class="body">
+        <header class="navbar navbar-expand-lg navbar-dark">
+            <div class="encabezado container-fluid">
+                <div class="d-flex flex-column align-items-center">
+                    <a class="navbar-brand" href="../index.html"><img class="encabezado__logo" src="../images/logo1.png" alt="logo"></a>
+                    <strong class="encabezado__lema"> Manicura y técnica profesional en uñas esculpidas</strong>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link encabezado__enlace" href="../pages/nosotras.html">Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link encabezado__enlace" href="../pages/listadeprecios.html">Lista de Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link encabezado__enlace" href="../pages/solicitatuturno.html">Solicita Tu Turno</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link encabezado__enlace" href="../pages/galeriadefotos.html">Galeria de Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link encabezado__enlace" href="../pages/proximamente.html">Proximamente!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <hr class="separador color-change-3x">
+
+    <!--Final de Encabezado + botones navegables de la Web-->
+
+    <!--Comienzo del cuerpo "Solicita Tu Turno"-->
+
+        <section class="form">
+            <div class="form__titulo">
+                <em class="contenedor__titulo" data-aos="fade-down" data-aos-delay="50" data-aos-once="true">Solicita Tu Turno</em>
+            </div>
+            <div class="form__contenedor" data-aos="fade-down" data-aos-delay="100" data-aos-once="true">
+                <form action="https://formsubmit.co/7a86a913dcbed33d5c4fa514c0499a24" method="post">
+                    <fieldset class="form__contenedorRecuadro">
+                        <label class="form__contenedorTitulo" for="diadelturno">Dia del turno:</label>
+                        <div class="form-check form__contenedorOpcion">
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input form__contenedorRadio--ml" type="radio" name="diadelturno" value="lunes" required>Lunes
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="diadelturno" value="martes" required>Martes
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="diadelturno" value="miercoles" required>Miercoles
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="diadelturno" value="jueves" required>Jueves
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="diadelturno" value="viernes" required>Viernes
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="diadelturno" value="sabado" required>Sabado
+                            </div>
+                        </div>
+                        <label class="form__contenedorTitulo" for="horariodelturno">Franja horaria:</label>
+                        <div class="form-check form__contenedorOpcion">
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input form__contenedorRadio--ml" type="radio" name="horariodelturno" value="nueveADoce" required>De 9 a 12hs
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="horariodelturno" value="doceAQuince" required>De 12 a 15hs
+                            </div>
+                            <div class="form__contenedorDato">
+                                <input class="form__contenedorRadio form-check-input" type="radio" name="horariodelturno" value="quinceADieciocho" required>De 15 a 18hs
+                            </div>
+                        </div>
+                        <label class="form__contenedorTitulo" for="info-personal">Nombre:</label>
+                        <div class="form__contenedorText">
+                            <input class="form__contenedorComp form-control" type="text" name="user-name" id="info-personal" placeholder="Escriba su nombre" required>
+                        </div>
+                        <label class="form__contenedorTitulo" for="info-personal">Apellido:</label>
+                        <div class="form__contenedorText">
+                            <input class="form__contenedorComp form-control" type="text" name="user-surname" id="info-personal" placeholder="Escriba su apellido" required>
+                        </div>
+                        <label class="form__contenedorTitulo" for="info-personal">Telefono de contacto:</label>
+                        <div class="form__contenedorText">
+                            <input class="form__contenedorComp form-control" type="number" name="user-tel" id="info-personal" required>
+                        </div>
+                        <label class="form__contenedorTitulo" for="trabajoarealizar">¿Que tenes ganas de hacerte en las uñas?</label>
+                        <div class="form__contenedorText">
+                            <select class="form__contenedorSel form-select" name="user-work" id="trabajoarealizar">
+                                <option value="trabajoA">Uñas esculpidas en acrílico con dos decos simples</option>
+                                <option value="trabajoB">Capping acrilico / gel básicos con dos decos simples</option>
+                                <option value="trabajoC">Esmaltado semipermanente con dos decos simples</option>
+                                <option value="trabajoD">French / encapsulado / babyboomer en acrílico</option>
+                                <option value="trabajoE">Remoción de esculpidas / capping definitiva</option>
+                                <option value="trabajoF">Remoción de esculpidas / capping parcial</option>
+                            </select>
+                        </div>
+                        <label class="form__contenedorTitulo" for="adicionales">¿Queres añadir algun adicional?</label>
+                        <div class="form__contenedorText">
+                            <select class="form__contenedorSel form-select" name="user-workAdicional" id="adicionales">
+                                <option value="adicionalA">Ninguno</option>
+                                <option value="adicionalB">Caricaturas / Diseños 3D</option>
+                                <option value="adicionalC">Dijes chicos / muñecos Kawaii / piedras grandes</option>
+                                <option value="adicionalD">Piercings / polvos chromo</option>
+                            </select>
+                        </div>
+                        <label class="form__contenedorTitulo" for="campodetexto">Contanos en pocas palabras lo que querés. En breve te estamos contactando para confirmar el turno!:</label>
+                        <div class="form__contenedorText">
+                            <textarea class="form__textarea" name="explicaciondeltrabajo" id="campodetexto"></textarea>
+                        </div>
+                        <div id="contenedor" class="form__contenedorbtn">
+                            <input class="btn" type="reset" value="REINICIAR">
+                            <input id="btn-enviar" class="btn" type="submit" value="ENVIAR">
+
+                            <input type="hidden" name="_next" value="https://di-disculpidas.vercel.app/pages/solicitatuturno.html">
+                            <input type="hidden" name="_captcha" value="false">
+                        </div>
+
+
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+    <!--Final del cuerpo "Solicita Tu Turno"-->
+
+    <!--Comienzo del footer de la Web-->
+
+        <footer class="footer">
+            <div class="footer__contenedor">
+                <em class="footer__titulo">
+                    Aceptamos todos los metodos de pago!
+                </em>
+                <ul class="footer__item">
+                    <li>Efectivo</li>
+                    <li>Mercado Pago</li>
+                    <li>Tarjeta de Debito</li>
+                    <li>Tarjeta de Credito</li>
+                    <li>Transferencia</li>
+                </ul>
+            </div>
+            <div class="footer__contenedor">
+                <div>
+                    <nav class="footer__redes">
+                        <ul class="footer__redesItem">
+                            <li><a href="https://www.instagram.com/esculpidas.didi/"><img class="footer__imgIg" src="../images/instagram logo.png" alt="instagram"></a></li>
+                            <li><a href="https://www.facebook.com/diana.carolina1986"><img class="footer__imgFb" src="../images/facebook logo.png" alt="facebook"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="footer__firma"><b>DI-DI Scuplidas!</b> Una idea de Diana Castro Hernández</p>
+            </div>
+        </footer>
+    </div>
+
+<!--Final del footer de la Web-->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> 
+    AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

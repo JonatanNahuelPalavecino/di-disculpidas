@@ -1,0 +1,58 @@
+@import "../utilities/vars";
+@import "../responsive/media-queries";
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    @include hasta650px {
+      margin-top: 2rem;
+    }
+
+    &__contenedor {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: map-get($bordes, borde);
+      border-radius: map-get($bordes, curvaDelBorde)-4%;
+      @include sombreado-de-caja;
+      width: 700px;
+      margin: 4rem;
+      @include hasta768px {
+        width: 550px;
+      }
+      @include hasta650px {
+        width: 450px;
+      }
+      @include hasta550px {
+        width: 350px;
+      }
+      @include hasta550px {
+        width: 350px;
+      }
+      @include hasta425px {
+        width: 280px;
+      }
+
+      &A {
+        padding: 2rem;
+        text-align: center;
+        @include hasta650px {
+          padding: 1rem;
+        }
+        @include hasta550px {
+          padding: 1rem 1rem 0 1rem;
+        }
+      }
+      
+      &B {
+        @extend .price__contenedorA;
+      }
+      
+      &C {
+        @extend .price__contenedorA;
+      }
+    }
+  }
+  

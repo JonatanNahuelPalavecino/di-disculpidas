@@ -1,0 +1,86 @@
+@import "../utilities/vars";
+@import "../responsive/media-queries";
+
+.contenedor__galeria {
+  margin-top: 4rem;
+  @include hasta650px {
+    margin-top: 2rem;
+  }
+
+  &DeUñas {
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  &Titulo {
+    font-family: $fuente-bebas;
+    font-size: 3rem;
+    color: $color-principaldos;
+    text-align: center;
+    @include hasta768px {
+      font-size: 2.8rem;
+    }
+    @include hasta550px {
+      font-size: 2.2rem;
+    }
+    @include hasta425px {
+      font-size: 1.9rem;
+    }
+  }
+}
+.contenedor__deImagen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 2rem 4rem;
+  @include hasta1300px {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @include hasta650px {
+    margin: 1rem 1rem 2rem;
+  }
+}
+
+.contenedor__imagen {
+  @include sombreado-de-caja;
+  border: map-get($bordes, borde);
+  border-radius: map-get($bordes, curvaDelBorde);
+  object-fit: cover;
+  width: map-get($recuadro, anchoDeImagen);
+  height: map-get($recuadro, altoDeImagen);
+  @include hasta1300px {
+    width: map-get($recuadro, anchoDeImagen)+200px;
+    height: map-get($recuadro, altoDeImagen)+100px;
+    margin-bottom: 3rem;
+  }
+  @include hasta1115px {
+    width: map-get($recuadro, anchoDeImagen)+300px;
+    height: map-get($recuadro, altoDeImagen)+150px;
+  }
+  @include hasta768px {
+    width: map-get($recuadro, anchoDeImagen)+100px;
+    height: map-get($recuadro, altoDeImagen);
+  }
+  @include hasta650px {
+    margin-bottom: 1.5rem;
+  }
+  @include hasta550px {
+    width: map-get($recuadro, anchoDeImagen);
+    height: map-get($recuadro, altoDeImagen)-50px;
+  }
+  @include hasta425px {
+    width: map-get($recuadro, anchoDeImagen)-20px;
+    height: map-get($recuadro, altoDeImagen)-100px;
+  }
+
+  &Amp {
+    width: 100%;
+  }
+}
+
+.btn-close:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #f4a9a9;
+  opacity: 1;
+}
