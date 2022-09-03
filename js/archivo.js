@@ -1,7 +1,7 @@
 const btnEnviar = document.getElementById('btn-enviar');
 const contenedor = document.getElementById('body')
 
-btnEnviar.addEventListener ('click', () => {
+btnEnviar.addEventListener ('mouseover', () => {
     const div = document.createElement('div')
     div.className = "mensaje"
     div.innerHTML = `
